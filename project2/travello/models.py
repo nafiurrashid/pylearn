@@ -8,3 +8,13 @@ class Destination(models.Model):
      desc=models.TextField()
      price= models.IntegerField()
      offer= models.BooleanField(default=False)
+
+class testimonial(models.Model):
+    
+     name= models.CharField(max_length=100)
+     designation= models.CharField(max_length=100)
+     testimonial=models.TextField()
+   
+
+  
+    

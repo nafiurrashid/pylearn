@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Destination
+from .models import Destination, Testimonial, testimonial
 
 # Create your views here.
 def index(request):
@@ -31,7 +31,9 @@ def index(request):
 
     # dests = [dest1, dest2, dest3]
     dests=Destination.objects.all()
-    return render(request, "index.html", {'dests': dests})
+     testimonial=testimonial.objects.all()
+    return render(request, "index.html", {'dests': dests,'testimonial': testimonial})
+   
 
 def about(request):
     return render(request,"about.html")    
